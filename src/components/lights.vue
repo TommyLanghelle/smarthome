@@ -1,43 +1,39 @@
 <template>
   <div>
-      <v-item-group active-class="primary" @change="setPreset">
-      <v-container >
-        <v-row>
-          <v-col cols="12" md="4">
-            <v-item v-slot:default="{ active, toggle }" value="lightsAllOn">
-              <v-card class="d-flex align-center" dark height="50" @click="toggle">
-                <v-scroll-y-transition>
-                  <div v-if="active" class="display-1 flex-grow-1 text-center"> All On </div>
-                  <div v-else class="display-1 flex-grow-1 text-center">All On</div>
-                </v-scroll-y-transition>
-              </v-card>
-            </v-item>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-item v-slot:default="{ active, toggle }" value="lightsAllOff">
-              <v-card class="d-flex align-center" dark height="50" @click="toggle">
-                <v-scroll-y-transition>
-                  <div v-if="active" class="display-1 flex-grow-1 text-center"> All Off </div>
-                  <div v-else class="display-1 flex-grow-1 text-center">All Off</div>
-                </v-scroll-y-transition>
-              </v-card>
-            </v-item>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-item v-slot:default="{ active, toggle }" value="lightsMovieTime">
-              <v-card class="d-flex align-center" dark height="50" @click="toggle">
-                <v-scroll-y-transition>
-                  <div v-if="active" class="display-1 flex-grow-1 text-center"> Movie Time </div>
-                  <div v-else class="display-1 flex-grow-1 text-center">Movie Time</div>
-                </v-scroll-y-transition>
-              </v-card>
-            </v-item>
-          </v-col>
-        </v-row>
-      </v-container>
+    <v-item-group active-class="primary" @change="setPreset">
+      <v-row>
+        <v-col cols="12" md="4">
+          <v-item v-slot:default="{ active, toggle }" value="lightsAllOn">
+            <v-card class="d-flex align-center" dark height="50" @click="toggle">
+              <v-scroll-y-transition>
+                <div v-if="active" class="display-1 flex-grow-1 text-center"> All On </div>
+                <div v-else class="display-1 flex-grow-1 text-center">All On</div>
+              </v-scroll-y-transition>
+            </v-card>
+          </v-item>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-item v-slot:default="{ active, toggle }" value="lightsAllOff">
+            <v-card class="d-flex align-center" dark height="50" @click="toggle">
+              <v-scroll-y-transition>
+                <div v-if="active" class="display-1 flex-grow-1 text-center"> All Off </div>
+                <div v-else class="display-1 flex-grow-1 text-center">All Off</div>
+              </v-scroll-y-transition>
+            </v-card>
+          </v-item>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-item v-slot:default="{ active, toggle }" value="lightsMovieTime">
+            <v-card class="d-flex align-center" dark height="50" @click="toggle">
+              <v-scroll-y-transition>
+                <div v-if="active" class="display-1 flex-grow-1 text-center"> Movie Time </div>
+                <div v-else class="display-1 flex-grow-1 text-center">Movie Time</div>
+              </v-scroll-y-transition>
+            </v-card>
+          </v-item>
+        </v-col>
+      </v-row>
     </v-item-group>
-
-
     <v-row class="mb-12 flex-wrap">
         <v-col>
             <v-card class="mx-auto" max-width="344" min-width="200" outlined>
